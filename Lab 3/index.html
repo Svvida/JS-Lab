@@ -3,29 +3,28 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
 		<script src="script.js" defer></script>
 		<title>Lab3</title>
 	</head>
 	<body>
-		<audio
-			id="clap"
-			src="Drum/[99Sounds] 99 Drum Samples/Samples/clap-808.wav"
-			controls
-		></audio>
-		<audio
-			id="hihat"
-			src="Drum/[99Sounds] 99 Drum Samples/Samples/hihat-808.wav"
-			controls
-		></audio>
-		<audio
-			id="boom"
-			src="Drum/[99Sounds] 99 Drum Samples/Samples/perc-metal.wav"
-			controls
-		></audio>
-		<audio
-			id="cowbell"
-			controls
-			src="Drum/[99Sounds] 99 Drum Samples/Samples/cowbell-808.wav"
-		></audio>
+		<div class="drum-kit">
+			<div class="drum-pad" data-sound="boom">Q</div>
+			<div class="drum-pad" data-sound="clap">W</div>
+			<div class="drum-pad" data-sound="hihat">E</div>
+			<div class="drum-pad" data-sound="kick">R</div>
+			<div class="drum-pad" data-sound="openhat">A</div>
+			<div class="drum-pad" data-sound="ride">S</div>
+			<div class="drum-pad" data-sound="snare">D</div>
+			<div class="drum-pad" data-sound="tink">F</div>
+			<div class="drum-pad" data-sound="tom">G</div>
+		</div>
+		<div class="metronome-controls">
+			<button id="metronome-toggle">Włącz Metronom</button>
+			<input type="number" id="metronome-bpm" min="40" max="240" value="120" />
+			<label for="metronome-bpm">BPM</label>
+		</div>
+		<div class="channels"></div>
+		<button id="add-channel">Add Channel</button>
 	</body>
 </html>
