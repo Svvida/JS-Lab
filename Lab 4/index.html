@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MajNout</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>MajNout</h1>
+			<div class="note-form">
+				<input type="text" id="note-title" placeholder="Note Title" />
+				<textarea id="note-content" placeholder="Note Content"></textarea>
+				<input
+					type="text"
+					id="note-tags"
+					placeholder="Tags (separated by commas)"
+				/>
+				<input type="color" id="note-color" value="#ffffff" />
+				<label><input type="checkbox" id="note-pin" /> Pin Note</label>
+				<input
+					type="datetime-local"
+					id="note-reminder"
+					placeholder="Reminder"
+				/>
+				<div class="note-checklist">
+					<input
+						type="text"
+						id="checklist-item"
+						placeholder="Add checklist item"
+					/>
+					<button onclick="addChecklistItem()">Add</button>
+				</div>
+				<button onclick="saveNote()">Save Note</button>
+			</div>
+			<div class="search-container">
+				<input
+					type="text"
+					id="search-input"
+					placeholder="Search notes..."
+					onkeyup="searchNotes()"
+				/>
+			</div>
+			<div id="note-list"></div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
