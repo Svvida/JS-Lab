@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Moving Balls</title>
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: flex-start;
+				margin: 0;
+				font-family: Arial, sans-serif;
+				overflow: hidden;
+			}
+			#controls {
+				position: fixed;
+				top: 10px;
+				left: 10px;
+				z-index: 10;
+				background-color: rgba(255, 255, 255, 0.8);
+				padding: 10px;
+				border-radius: 5px;
+			}
+			#canvas-container {
+				margin-top: 60px;
+				border: 2px solid #000;
+				box-sizing: border-box;
+				width: 80%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="controls">
+			<label for="numBalls">Number of Balls:</label>
+			<input type="number" id="numBalls" value="100" min="1" />
+			<label for="X">Force X:</label>
+			<input type="number" id="X" value="1" step="0.1" />
+			<label for="Y">Force Y:</label>
+			<input type="number" id="Y" value="1" step="0.1" />
+			<button onclick="start()">Start</button>
+			<button onclick="reset()">Reset</button>
+			<button onclick="toggleForce()">Toggle Force</button>
+		</div>
+		<div id="canvas-container"></div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
