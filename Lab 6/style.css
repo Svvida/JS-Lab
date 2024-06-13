@@ -1,0 +1,44 @@
+body {
+	margin: 0;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #f0f0f0;
+}
+
+#game-area {
+	position: relative;
+	width: 80vw;
+	height: 80vh;
+	border: 2px solid #333;
+	background-color: white;
+	overflow: hidden;
+}
+
+#ball,
+#hole {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+#ball {
+	background-color: red;
+}
+
+#hole {
+	background-color: black;
+}
+
+#score-board {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
